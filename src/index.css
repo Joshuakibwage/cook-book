@@ -1,1 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 @import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@theme {
+    /* fonts */
+    --font-bebas-neue: "Bebas Neue";
+    --font-cursive: "Ephesis";
+    --font-inter: "Inter", sans-serif;
+
+    /* colors */
+    --color-primary: #FF7F50;
+    --color-secondary: #32CD32; 
+    --color-background: #F8F8F8;
+    --color-text: #333333;
+}
+ 

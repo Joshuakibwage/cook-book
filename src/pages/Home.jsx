@@ -1,11 +1,13 @@
-import React from 'react'
-
-const Home = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default Home
+ import React from 'react'
+ import RecipeFinder from "../components/RecipeFinder"
+ 
+ const Home = () => {
+   return (
+     <div>
+       <RecipeFinder />
+     </div>
+   )
+ }
+ 
+ export default Home
+ 
