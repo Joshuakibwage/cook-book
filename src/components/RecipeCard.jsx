@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Footer = () => {
+const RecipeCard = () => {
   return (
     <div>
-      footer
+      
     </div>
   )
 }
 
-export default Footer
+export default RecipeCard

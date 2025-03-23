@@ -1,23 +1,23 @@
 import { NavLink } from "react-router-dom";
-import { CiHome } from "react-icons/ci";
+// import { CiHome } from "react-icons/ci";
 
 
 const menuLinks = [
     {
         id: 1,
-        name: "Home",
-        path: "/home",
-        icon: <CiHome />
+        name: 'Home',
+        path: '/',
+        // icon: <CiHome />
     },
     {
         id: 2,
-        name: "Favorites",
-        path: "/favorites",
+        name: 'Favorites',
+        path: '/favorites',
     },
     {
         id: 3,
-        name: "Recipe Details",
-        path: "/recipe-details",
+        name: 'Recipe Details',
+        path: '/recipe-details',
     },
    
 ]
@@ -25,11 +25,10 @@ const menuLinks = [
 const Navbar = () => {
 
  return (
-  <nav className="w-full bg-background">
+  <nav className="w-full bg-gray-100">
     <div className="container mx-auto py-6 flex justify-between items-center">
       <div>
-         <p className="font-cursive text-4xl relative">Cook</p>
-         <p className="text-xs tracking-[0.5rem] absolute">BOOK</p>
+           <h1 className="font-bold  ">Cook book</h1>
       </div>
       <ul className="hidden md:flex items-center gap-10">
         {
@@ -37,14 +36,27 @@ const Navbar = () => {
             <li 
             className="text-primary"
             key={link.id}>
-              <NavLink path={link.path}>
+              <NavLink 
+                to={link.path}
+                className={({isActive, isPending}) => (
+                  isActive
+                  ? "active"
+                  : isPending
+                  ? "pending"
+                  : ""
+                )}
+              >
                 {link.name}
               </NavLink>
             </li>
           ))
         }
       </ul>
-      <div></div>
+      <div>
+        <button>
+          SignUp
+        </button>
+      </div>
     </div>
   </nav>
  )

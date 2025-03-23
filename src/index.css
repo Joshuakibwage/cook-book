@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--color-background)
+}
+
 
 @theme {
     /* fonts */
@@ -17,9 +21,18 @@ html {
     --font-inter: "Inter", sans-serif;
 
     /* colors */
-    --color-primary: #FF7F50;
-    --color-secondary: #32CD32; 
-    --color-background: #F8F8F8;
-    --color-text: #333333;
+    --color-text: #090a07,
+    --color-background: #F7F7F7,
+    --color-primary: #FFA400,
+    --color-secondary: #00A896,
+    --color-accent: #95b1b4,
 }
  
+.active {
+    @apply text-green-400 underline underline-offset-4
+  }
+  
+  .active-button {
+    color: gray;
+  }
+  
