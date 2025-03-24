@@ -4,6 +4,7 @@
  import Featured from "../components/Featured"
  import HowItWorks from "../components/HowItWorks"
  import Benefits from "../components/Benefits"
+ import Testimonials from "../components/Testimonials"
  
  const Home = () => {
    return (
@@ -13,6 +14,7 @@
        <Featured />
        <HowItWorks />
        <Benefits />
+       <Testimonials />
      </div>
    )
  }
