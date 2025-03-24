@@ -35,6 +35,7 @@ const Featured = () => {
                 src="src/assets/pizza.jpg" 
                 alt="pizza" 
                 className="shadow-2xl shadow-black"
+                loading="lazy"
             /> 
         </div>
       </div>
