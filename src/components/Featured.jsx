@@ -34,7 +34,7 @@ const Featured = () => {
            <img 
                 src="src/assets/pizza.jpg" 
                 alt="pizza" 
-                className="shadow-2xl shadow-white"
+                className="shadow-2xl shadow-black"
             /> 
         </div>
       </div>

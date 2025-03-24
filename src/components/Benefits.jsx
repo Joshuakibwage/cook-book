@@ -30,7 +30,7 @@ const Benefits = () => {
                 </div>
             </div>
             <div>
-                <button className="font-semibold border border-green-500 hover:bg-green-600 transition-colors delay-300 hover:text-white px-8 py-2 cursor-pointer">
+                <button className="font-semibold border-2 border-green-500 hover:bg-green-600 transition-colors delay-300 hover:text-white px-8 py-2 cursor-pointer">
                     Learn More
                 </button>
                 
@@ -39,9 +39,9 @@ const Benefits = () => {
         </div>
         <div className="order-1">
            <img 
-                src="src/assets/pizza.jpg" 
+                src="src/assets/salad.jpg" 
                 alt="pizza" 
-                className="shadow-2xl shadow-white"
+                className="shadow-2xl shadow-black"
             /> 
         </div>
       </div>
