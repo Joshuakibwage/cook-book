@@ -1,4 +1,4 @@
- 
+import CallToAction from "../components/CallToAction"
  import RecipeFinder from "../components/RecipeFinder"
  import Hero from "../components/Hero"
  import Featured from "../components/Featured"
@@ -15,6 +15,7 @@
        <HowItWorks />
        <Benefits />
        <Testimonials />
+       <CallToAction />
      </div>
    )
  }
