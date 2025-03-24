@@ -2,6 +2,7 @@
  import RecipeFinder from "../components/RecipeFinder"
  import Hero from "../components/Hero"
  import Featured from "../components/Featured"
+ import HowItWorks from "../components/HowItWorks"
  
  const Home = () => {
    return (
@@ -9,6 +10,7 @@
        <Hero />
        <RecipeFinder />
        <Featured />
+       <HowItWorks />
      </div>
    )
  }
