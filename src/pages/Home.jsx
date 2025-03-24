@@ -5,6 +5,7 @@ import CallToAction from "../components/CallToAction"
  import HowItWorks from "../components/HowItWorks"
  import Benefits from "../components/Benefits"
  import Testimonials from "../components/Testimonials"
+ import NewsLetter from "../components/NewsLetter"
  
  const Home = () => {
    return (
@@ -16,6 +17,7 @@ import CallToAction from "../components/CallToAction"
        <Benefits />
        <Testimonials />
        <CallToAction />
+       <NewsLetter />
      </div>
    )
  }
