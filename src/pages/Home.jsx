@@ -3,6 +3,7 @@
  import Hero from "../components/Hero"
  import Featured from "../components/Featured"
  import HowItWorks from "../components/HowItWorks"
+ import Benefits from "../components/Benefits"
  
  const Home = () => {
    return (
@@ -11,6 +12,7 @@
        <RecipeFinder />
        <Featured />
        <HowItWorks />
+       <Benefits />
      </div>
    )
  }
