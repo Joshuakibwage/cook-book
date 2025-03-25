@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import FlyOut from "./FlyOut"
 import ResourcesContent from "./ResourcesContent"
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { useState } from "react"
+import { IoClose } from "react-icons/io5";
+import ResponsiveMenu from "./ResponsiveMenu"
 
 
 
@@ -28,8 +32,14 @@ const menuItems = [
 ]
  
  const Navbar = () => {
+
+  const [menu, setMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setMenu(!menu)
+  }
    return (
-     <nav className="w-full sticky top-0 left-0 right-0 bg-green-900 text-white z-10 py-4 shadow-2xl shadow-black">
+     <nav className="w-full sticky top-0 left-0 right-0 bg-green-900 text-white z-10 py-4 shadow-sm shadow-black ">
       <div className="px-6 md:px-0 md:container mx-auto flex justify-between items-center">
         {/* logo */}
         <div>
@@ -39,33 +49,58 @@ const menuItems = [
         </div>
 
         {/* NAV LINKS */}
-        <div className=" ">
+        <div className="hidden md:flex ">
           <ul className="flex gap-4">
             {
               menuItems.map((link) => (
                 <li key={link.id}>
-                  <Link to={link.path}>
+                  <NavLink 
+                    to={link.path}
+                    className={({isActive, isPending}) => (
+                      isActive
+                      ? "active"
+                      : isPending
+                      ? "pending"
+                      : ""
+                    )}
+                  >
                     {link.label}
-                  </Link>
+                  </NavLink>
                 </li>
               ))
             }
             <div className="relative">
                
-               <FlyOut FlyoutContent={ResourcesContent}>
+              <FlyOut FlyoutContent={ResourcesContent}>
                   Resources
-               </FlyOut>
+              </FlyOut>
             </div>
           </ul>
           
         </div>
-        <div>
-          <button className="bg-green-500 px-8 py-2 rounded-md hover:-translate-y-1 hover:scale-105 transition-all delay-300 ease-in-out hover:bg-green-600 cursor-pointer font-bold">
+        <div className="flex items-center gap-3">
+          <button className="bg-green-500 px-8 py-2 rounded-md hover:-translate-y-1 hover:scale-105 transition-all delay-300 ease-in-out hover:bg-green-600 cursor-pointer font-bold hidden md:block">
             Sign In
           </button>
+          {/* hamburger menu */}
+          <button onClick={toggleMenu} className="p-2 rounded-full delay-300 transition-all cursor-pointer md:hidden flex hover:bg-green-500">
+            {
+              menu ? (
+                <IoClose size={30}/>
+              ) : (
+                <HiOutlineMenuAlt3 size={30}/>
+              )
+            }
+          </button>
         </div>
+        
       </div>
-       
+        {/* mobile menu */}
+
+        <ResponsiveMenu 
+          menu={menu}
+          toggleMenu={toggleMenu}
+        />
      </nav>
    )
  }
