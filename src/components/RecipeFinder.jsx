@@ -6,7 +6,7 @@ const RecipeFinder = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  console.log(recipes)
+  // console.log(recipes)
   const handleSearch = async () => {
     if (!ingredients.trim()) return;
     

@@ -9,7 +9,7 @@ import CallToAction from "../components/CallToAction"
  
  const Home = () => {
    return (
-     <div>
+     <section>
        <Hero />
        <RecipeFinder />
        <Featured />
@@ -18,7 +18,7 @@ import CallToAction from "../components/CallToAction"
        <Testimonials />
        <CallToAction />
        <NewsLetter />
-     </div>
+     </section>
    )
  }
  

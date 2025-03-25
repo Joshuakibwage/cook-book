@@ -1,66 +1,74 @@
-import { NavLink } from "react-router-dom";
-// import { CiHome } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import FlyOut from "./FlyOut"
+import ResourcesContent from "./ResourcesContent"
 
 
-const menuLinks = [
-    {
-        id: 1,
-        name: 'Home',
-        path: '/',
-        // icon: <CiHome />
-    },
-    {
-        id: 2,
-        name: 'Favorites',
-        path: '/favorites',
-    },
-    {
-        id: 3,
-        name: 'Recipe Details',
-        path: '/recipe-details',
-    },
-   
+
+const menuItems = [
+  {
+    label: "Home",
+    path: '/',
+    id: 0
+  },
+  {
+    label: "About",
+    path: '/about',
+    id: 1
+  },
+  {
+    label: "Contact",
+    path: '/contact',
+    id: 2
+  },
+  {
+    label: "Blogs",
+    path: '/blogs',
+    id: 3
+  }
 ]
-
-const Navbar = () => {
-
- return (
-  <nav className="w-full bg-gray-100">
-    <div className="container mx-auto py-6 flex justify-between items-center">
-      <div>
-           <h1 className="font-bold  ">Cook book</h1>
-      </div>
-      <ul className="hidden md:flex items-center gap-10">
-        {
-          menuLinks.map((link) => (
-            <li 
-            className="text-primary"
-            key={link.id}>
-              <NavLink 
-                to={link.path}
-                className={({isActive, isPending}) => (
-                  isActive
-                  ? "active"
-                  : isPending
-                  ? "pending"
-                  : ""
-                )}
-              >
-                {link.name}
-              </NavLink>
-            </li>
-          ))
-        }
-      </ul>
-      <div>
-        <button>
-          SignUp
-        </button>
-      </div>
-    </div>
-  </nav>
- )
  
-}
+ const Navbar = () => {
+   return (
+     <nav className="w-full sticky top-0 left-0 right-0 bg-green-900 text-white z-10 py-4 shadow-2xl shadow-black">
+      <div className="px-6 md:px-0 md:container mx-auto flex justify-between items-center">
+        {/* logo */}
+        <div>
+          <h1>
+            COOKBOOK
+          </h1>
+        </div>
 
-export default Navbar
+        {/* NAV LINKS */}
+        <div className=" ">
+          <ul className="flex gap-4">
+            {
+              menuItems.map((link) => (
+                <li key={link.id}>
+                  <Link to={link.path}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))
+            }
+            <div className="relative">
+               
+               <FlyOut FlyoutContent={ResourcesContent}>
+                  Resources
+               </FlyOut>
+            </div>
+          </ul>
+          
+        </div>
+        <div>
+          <button className="bg-green-500 px-8 py-2 rounded-md hover:-translate-y-1 hover:scale-105 transition-all delay-300 ease-in-out hover:bg-green-600 cursor-pointer font-bold">
+            Sign In
+          </button>
+        </div>
+      </div>
+       
+     </nav>
+   )
+ }
+ 
+ export default Navbar
+ 
