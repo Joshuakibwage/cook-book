@@ -31,7 +31,7 @@ const About = () => {
                     <img
                       className="size-full object-cover object-top"
                       src={hero2}
-                      alt=""
+                      alt="salad"
                     />
                   </div>
                 </div>
@@ -80,7 +80,7 @@ const About = () => {
               <div className="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5"></div>
             </div>
             <div className="relative lg:row-span-2">
-              <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+             
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
                 <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                   <p className="mt-2 text-lg font-medium tracking-tight text-green-800 max-lg:text-center">
@@ -91,10 +91,13 @@ const About = () => {
                   </p>
                 </div>
                 <div className="relative min-h-[30rem] w-full grow">
-                  <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
-                    <div className="flex bg-gray-800/40 ring-1 ring-white/5">
-                       <img src={hero3} alt="" />
-                    </div>
+                  <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-green-800 shadow-2xl">
+                     
+                    <img 
+                      src={hero3} 
+                      className="h-full object-center object-cover" 
+                      alt="sharwama" 
+                    />
                      
                   </div>
                 </div>
