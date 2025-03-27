@@ -9,30 +9,53 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: var(--color-background)
-}
 
+html {
+    scroll-behavior: smooth;
+}
 
 @theme {
     /* fonts */
     --font-bebas-neue: "Bebas Neue";
     --font-cursive: "Ephesis";
     --font-inter: "Inter", sans-serif;
-
+   
+  
+  
     /* colors */
-    --color-text: #090a07,
-    --color-background: #F7F7F7,
-    --color-primary: #FFA400,
-    --color-secondary: #00A896,
-    --color-accent: #95b1b4,
-}
+    --color-text: #0b060b;
+    --color-background: #020618;
+    --color-primary: #0d542b;
+    --color-secondary: #d2a8b8;
+    --color-accent: #bf8391;
+  
+  }
  
 .active {
-    @apply text-green-500 underline underline-offset-4
+    @apply text-green-500 underline underline-offset-4  
   }
   
   .active-button {
     color: gray;
   }
   
+  .custom-shape-divider-top-1742917603 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1742917603 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 233px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1742917603 .shape-fill {
+    fill: #0d542b;
+}
