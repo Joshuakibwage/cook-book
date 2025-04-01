@@ -7,6 +7,7 @@ import CallToAction from "../components/CallToAction"
  import Testimonials from "../components/Testimonials"
  import NewsLetter from "../components/NewsLetter"
  
+ 
  const Home = () => {
    return (
      <section>

@@ -7,10 +7,10 @@ export const fetchRecipesByIngredients = async (ingredients) => {
 
   const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY;
   
-  if (!apiKey) {
-    console.error('API key is missing. Make sure VITE_SPOONACULAR_API_KEY is set in your .env file');
-    throw new Error('API key is not configured');
-  }
+  // if (!apiKey) {
+  //   console.error('API key is missing. Make sure VITE_SPOONACULAR_API_KEY is set in your .env file');
+  //   throw new Error('API key is not configured');
+  // }
 
   const ingredientsList = ingredients.split(',').map(i => i.trim()).join(',');
   const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredientsList}&apiKey=${apiKey}&number=5`;
@@ -29,3 +29,10 @@ export const fetchRecipesByIngredients = async (ingredients) => {
   return await response.json();
    
 };
+
+
+
+
+ 
+
+ 

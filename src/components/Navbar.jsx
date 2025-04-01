@@ -31,7 +31,7 @@ const menuItems = [
   }
 ]
  
- const Navbar = () => {
+ const Navbar = ({session, signOut}) => {
 
   const [menu, setMenu] = useState(false);
 
@@ -79,9 +79,16 @@ const menuItems = [
           
         </div>
         <div className="flex items-center gap-3">
-          <button className="bg-green-500 px-8 py-2 rounded-md hover:-translate-y-1 hover:scale-105 transition-all delay-300 ease-in-out hover:bg-green-600 cursor-pointer font-bold hidden md:block">
-            Sign In
-          </button>
+           <div className="px-4 py-1 text-center text-green-800 font-extrabold rounded-full bg-green-300">
+            {
+              session?.user?.email[0]
+            }
+           </div>
+           <button 
+           className="border border-white px-4 py-1 rounded-2xl hover:border-border-green-500 hover:bg-green-500 transition-colors delay-300 ease-in-out cursor-pointer"
+           onClick={() => signOut()}>
+              Sign Out
+            </button>
           {/* hamburger menu */}
           <button onClick={toggleMenu} className="p-2 rounded-full delay-300 transition-all cursor-pointer md:hidden flex hover:bg-green-500">
             {

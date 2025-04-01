@@ -32,6 +32,7 @@ const About = () => {
                       className="size-full object-cover object-top"
                       src={hero2}
                       alt="salad"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -97,6 +98,7 @@ const About = () => {
                       src={hero3} 
                       className="h-full object-center object-cover" 
                       alt="sharwama" 
+                      loading="lazy"
                     />
                      
                   </div>
