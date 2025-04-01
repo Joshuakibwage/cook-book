@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { ChevronLeft, ChevronRight } from "lucide-react"; //
 
 
 const testimonialData = [
@@ -49,55 +52,71 @@ const testimonialData = [
 
 const Testimonials = () => {
 
-  const [currentIndex, setCurrentIndex] = useState(0)
+ 
+// Custom Next Button
+const NextArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute top-1/2 right-[-40px] transform -translate-y-1/2 bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-600 transition cursor-pointer"
+  >
+    <ChevronRight size={24} />
+  </button>
+);
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? testimonialData.length - 1 : currentIndex -1 ;
-    setCurrentIndex(newIndex)
-  }
+// Custom Prev Button
+const PrevArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute top-1/2 left-[-40px] transform -translate-y-1/2 bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-600 transition cursor-pointer"
+  >
+    <ChevronLeft size={24} />
+  </button>
+);
 
 
-  const nextSlide = () => {
 
-  }
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+};
+   
   return (
-   
-          <section className="relative isolate overflow-hidden bg-green-100 px-6 py-24 sm:py-32 lg:px-8">
-            <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-100),white)] opacity-20" />
-            <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white ring-1 shadow-xl shadow-green-600/10 ring-green-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
-            <div className="mx-auto max-w-2xl lg:max-w-4xl">
-              <img
-                alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"
-                className="mx-auto h-12 text-green-700"
-              />
-              <figure className="mt-10">
-                <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
-                  <p>
-                  "This app has transformed my cooking! I can now whip up delicious meals with whatever I have on hand."
-                  </p>
-                </blockquote>
-                <figcaption className="mt-10">
-                  <img
-                    alt=""
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    className="mx-auto size-50 rounded-full"
-                  />
-                  <div className="mt-4 flex flex-col space-y-2 items-center justify-center space-x-3 text-base">
-                    <div className="font-semibold text-gray-900">Emily Johnson</div>
-                    <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
-                      <circle r={1} cx={1} cy={1} />
-                    </svg>
-                    <div className="text-gray-600">Home Chef, Blogger</div>
-                  </div>
-                </figcaption>
-              </figure>
+    <div className="max-w-2xl mx-auto py-12 px-6 relative md:py-32">
+      <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
+        What People Say
+      </h2>
+      <Slider {...settings}>
+        {testimonialData.map((testimonial, index) => (
+          <div
+            key={index}
+            className="bg-white p-6 rounded-2xl shadow-lg text-center transform transition-all duration-300 hover:scale-105"
+          >
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">
+              {testimonial.title}
+            </h3>
+            <p className="text-gray-700 italic">{testimonial.content}</p>
+            <div className="w-full flex justify-center my-3 ">
+              <img 
+                src={testimonial.image} 
+                alt={testimonial.name} 
+                className="size-40 rounded-full object-center object-cover"/>
             </div>
-          </section>
-   
-      
-  )
-}
+            <div className="mt-4">
+              <span className="font-semibold text-gray-900">{testimonial.name}</span> –{" "}
+              <span className="text-gray-500">{testimonial.occupation}</span>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
 
 export default Testimonials
