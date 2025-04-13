@@ -57,7 +57,7 @@ const Testimonials = () => {
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute top-1/2 right-[-40px] transform -translate-y-1/2 bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-600 transition cursor-pointer"
+    className="absolute top-1/2 right-[-40px] md:right-[-80px] transform -translate-y-1/2 bg-green-800 text-white p-2 rounded-full shadow-lg hover:bg-green-600 transition cursor-pointer"
   >
     <ChevronRight size={24} />
   </button>
@@ -67,7 +67,7 @@ const NextArrow = ({ onClick }) => (
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute top-1/2 left-[-40px] transform -translate-y-1/2 bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-600 transition cursor-pointer"
+    className="absolute top-1/2 left-[-40px] md:left-[-80px] transform -translate-y-1/2 bg-green-800 text-white p-2 rounded-full shadow-lg hover:bg-green-600 transition cursor-pointer"
   >
     <ChevronLeft size={24} />
   </button>
@@ -96,7 +96,7 @@ const settings = {
         {testimonialData.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-2xl shadow-lg text-center transform transition-all duration-300 hover:scale-105"
+            className="bg-white p-6 rounded-2xl text-center transform transition-all duration-300 hover:scale-105"
           >
             <h3 className="text-xl font-semibold mb-2 text-gray-900">
               {testimonial.title}

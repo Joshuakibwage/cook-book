@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {
   FaFacebook,
   FaInstagram,
@@ -84,18 +84,18 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center gap-8">
-            <div>
+            <a href='https://www.instagram.com' target="_blank">
               <FaInstagram />
-            </div>
-            <div>
+            </a>
+            <a href='https://www.facebook.com' target="_blank">
               <FaFacebook />
-            </div>
-            <div>
+            </a>
+            <a href='https://www.x.com' target="_blank">
               <FaTwitter />
-            </div>
-            <div>
+            </a>
+            <a href='https://www.youtube.com' target="_blank">
               <FaYoutube />
-            </div>
+            </a>
           </div>
         </div>
         <div className="overflow-hidden mt-12">

@@ -5,10 +5,6 @@
 
 @import "tailwindcss";
 
-html {
-    scroll-behavior: smooth;
-}
-
 
 html {
     scroll-behavior: smooth;
@@ -32,7 +28,7 @@ html {
   }
  
 .active {
-    @apply text-green-500 underline underline-offset-4  
+    @apply text-green-500 underline underline-offset-4 h-2
   }
   
   .active-button {
