@@ -89,16 +89,28 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-8">
             <a href='https://www.instagram.com' target="_blank">
-              <FaInstagram />
+              <FaInstagram 
+                size={20}
+                className="text-fuchsia-400 hover:scale-110 transition-all delay-200 ease-in-out"
+              />
             </a>
             <a href='https://www.facebook.com' target="_blank">
-              <FaFacebook />
+              <FaFacebook 
+                size={20}
+                className="text-blue-400 hover:scale-110 transition-all delay-200 ease-in-out"
+              />
             </a>
             <a href='https://www.x.com' target="_blank">
-              <FaTwitter />
+              <FaTwitter
+                size={20}
+                className="text-blue-400 hover:scale-110 transition-all delay-200 ease-in-out"
+              />
             </a>
             <a href='https://www.youtube.com' target="_blank">
-              <FaYoutube />
+              <FaYoutube 
+                size={20}
+                className="text-red-400 hover:scale-110 transition-all delay-200 ease-in-out"
+              />
             </a>
           </div>
         </div>
