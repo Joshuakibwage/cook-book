@@ -14,12 +14,12 @@ const ErrorPage = () => {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="#"
+              href="home"
               className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
               Go back home
             </a>
-            <a href="#" className="text-sm font-semibold text-gray-900">
+            <a href="#" className="text-sm font-semibold text-gray-900 border border-green-200 px-3.5 py-2.5">
               Contact support <span aria-hidden="true">&rarr;</span>
             </a>
           </div>

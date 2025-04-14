@@ -10,7 +10,11 @@ const Footer = () => {
   return (
     <footer className="pt-8 sm:pt-14 md:pt-18 lg:pt-24 px-8 sm:px-0 bg-gray-300">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 container mx-auto gap-10">
-        <div>Logo</div>
+        <div>
+          <h2 className="font-cursive text-5xl text-green-800 font-bold">
+            Cookbook
+          </h2>
+        </div>
         <div>
           <h3 className="font-bold">Quick Links</h3>
           <ul className="mt-2 text-sm">

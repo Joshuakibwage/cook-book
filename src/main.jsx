@@ -7,6 +7,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Blogs from "./pages/Blogs"
+import ErrorPage from "./components/ErrorPage"
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
       {
         path: 'blogs',
         element: <Blogs />
+      },
+      {
+        path:'*',
+        element:<><ErrorPage /></>,
+        errorElement:<><ErrorPage /></>
       }
     ]
   }

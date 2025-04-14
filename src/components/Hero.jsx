@@ -21,17 +21,6 @@ const Hero = () => {
               Discover mouthwatering recipes tailored to your available ingredients. Simplify meal prep and 
               reduce food waste with our intuitive app.
             </p>
-            <div className="space-x-4 mt-8 md:mt-16">
-              <button className="bg-green-400 px-8 py-2 hover:bg-green-600 delay-200 ease-in-out font-semibold
-              transition-colors cursor-pointer">
-                Download
-              </button>
-              
-              <button className="px-8 py-2 border cursor-pointer hover:bg-green-400 delay-200 transition-colors
-              ease-in-out font-semibold">
-                SignUp
-              </button>
-            </div>
           </div>
         </div>
       </div>
