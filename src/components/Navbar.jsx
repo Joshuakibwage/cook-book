@@ -5,7 +5,8 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { useState } from "react"
 import { IoClose } from "react-icons/io5";
 import ResponsiveMenu from "./ResponsiveMenu"
-
+import Modal from './Modal';
+import Button from "./Button"
 
 
 const menuItems = [
@@ -34,10 +35,22 @@ const menuItems = [
  const Navbar = () => {
 
   const [menu, setMenu] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenu(!menu)
   }
+
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const closeModal = () => {
+      setIsModalOpen(false);
+  }
+
+
    return (
      <nav className="w-full sticky top-0 left-0 right-0 bg-green-900 text-white z-10 py-4 shadow-sm shadow-black ">
       <div className="px-6 md:px-0 md:container mx-auto flex justify-between items-center">
@@ -80,11 +93,17 @@ const menuItems = [
         </div>
         <div className="flex items-center gap-3">
  
-           {/* <button 
-           className="border border-white px-4 py-1 rounded-2xl hover:border-border-green-500 hover:bg-green-500 transition-colors delay-300 ease-in-out cursor-pointer"
-           onClick={() => signOut()}>
-              Sign Out
-            </button> */}
+          <Button 
+            onClick={openModal}
+            label="Log In"
+            className="bg-green-400 px-6 py-2 rounded-md font-semibold text-white 
+            hover:bg-white hover:-translate-y-1 cursor-pointer transition-all ease-in-out delay-200 hover:text-green-500"
+          />
+
+          <Modal 
+            isOpen={isModalOpen}
+            onClose={closeModal}
+          />
           {/* hamburger menu */}
           <button onClick={toggleMenu} className="p-2 rounded-full delay-300 transition-all cursor-pointer md:hidden flex hover:bg-green-500">
             {
