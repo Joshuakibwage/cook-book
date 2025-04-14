@@ -68,7 +68,7 @@ const RecipeFinder = () => {
                     <img 
                       src={recipe.image} 
                       alt={recipe.title} 
-                      className="w-120 h-80 object-cover rounded mr-3"
+                      className="w-100 h-80 object-cover rounded mr-3"
                     />
                   )}
                   <div>

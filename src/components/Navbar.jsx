@@ -56,8 +56,8 @@ const menuItems = [
       <div className="px-6 md:px-0 md:container mx-auto flex justify-between items-center">
         {/* logo */}
         <div>
-          <h1>
-            COOKBOOK
+          <h1 className="font-bold text-4xl font-cursive">
+            Cookbook
           </h1>
         </div>
 
