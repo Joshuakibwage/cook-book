@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaCube } from "react-icons/fa";
+import pizza from "../assets/pizza.jpg"
 
 const Featured = () => {
   return (
@@ -32,10 +33,10 @@ const Featured = () => {
         </div>
         <div>
            <img 
-                src="src/assets/pizza.jpg" 
-                alt="pizza" 
-                className="shadow-2xl shadow-black"
-                loading="lazy"
+              src={pizza} 
+              alt="pizza" 
+              className="shadow-2xl shadow-black"
+              loading="lazy"
             /> 
         </div>
       </div>

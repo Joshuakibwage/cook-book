@@ -8,20 +8,20 @@ import CallToAction from "../components/CallToAction"
  import NewsLetter from "../components/NewsLetter"
  
  
- const Home = () => {
-   return (
-     <section>
-       <Hero />
-       <RecipeFinder />
-       <Featured />
-       <HowItWorks />
-       <Benefits />
-       <Testimonials />
-       <CallToAction />
-       <NewsLetter />
-     </section>
-   )
- }
+  const Home = () => {
+    return (
+      <section>
+        <Hero />
+        <RecipeFinder />
+        <Featured />
+        <HowItWorks />
+        <Benefits />
+        <Testimonials />
+        <CallToAction />
+        <NewsLetter />
+      </section>
+    )
+  }
  
  export default Home
  

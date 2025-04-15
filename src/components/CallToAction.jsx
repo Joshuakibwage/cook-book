@@ -1,10 +1,11 @@
 import React from 'react'
+import burger from "../assets/burger.jpg"
 
 const CallToAction = () => {
   return (
     <section className="relative">
         <img 
-            src="src/assets/burger.jpg" 
+            src={burger}
             alt="burger" 
             className="w-full h-[70vh] object-cover"
         />

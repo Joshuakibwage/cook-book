@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaCube } from "react-icons/fa";
+import salad from "../assets/salad.jpg"
  
 
 const Benefits = () => {
@@ -39,8 +40,8 @@ const Benefits = () => {
         </div>
         <div className="order-1">
            <img 
-                src="src/assets/salad.jpg" 
-                alt="pizza" 
+                src={salad} 
+                alt="salad" 
                 className="shadow-2xl shadow-black"
             /> 
         </div>
